@@ -47,7 +47,7 @@ For more reference, [Click Here](https://www.docker.com/resources/what-container
 - **ctrl+p+q**: Detaches the terminal from the Docker container without stopping it.
 - **docker run -p 80:80 -d --name webos -v /mydata/:/usr/share/nginx/html  nginx** Mount a local directory with the container to get persistent volume
 - **docker inspect <container_name>** - This command will allow you to inspect a container. It will give you detailed information about the container such as the IP address, the volumes, the environment variables, etc.
-- **docker exec -it <container_name> bash** - This command will allow you to execute bash program inside your container, you can also run any other program like date, python3 etc.
+- **docker exec -it container_name bash** - This command will allow you to execute bash program inside your container, you can also run any other program like date, python3 etc.
 - **docker run -it -p 80:80 -v /local_dir:/container_dir <image_name>** - This command will allow you to run a container with the given image. The `-it` flag will allow you to run the container in interactive mode with a terminal. The `-p` flag will allow you to map the port of the container to the port of the host machine. The `-v` flag will allow you to mount a local directory/volume to a directory inside your container. So we can have a persistent storage for our containers.
 - **docker cp <container_name>:<container_dir> <local_dir>** - This command will allow you to copy files from a container to your local machine.
 - **docker cp <local_dir> <container_name>:<container_dir>** - This command will allow you to copy files from your local machine to a container.
